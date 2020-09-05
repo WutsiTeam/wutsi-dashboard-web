@@ -1,5 +1,5 @@
 <?php
 
-include_once("dashboard.hyml");
+include_once("dashboard.html");
 
 ?>
