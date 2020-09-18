@@ -1,3 +1,12 @@
+#Checkingout
+- The repository can be opened by 
+1)  Changing directory(cd) to the prototype folder wutsi-dashboard-web
+2) Then cd to productions folder
+3) In the productions folder, we have the index files of the prototype.
+4)Use these index files to lauch prototype on the browser
+
+
+
 #accessing.
 - There are three charts (graphs) with id names
 1) chart_plot_01
