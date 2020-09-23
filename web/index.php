@@ -38,12 +38,12 @@
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
-                            <span class="count_top"><i class="far fa-eye"></i> Total Views</span>
+                            <span class="count_top"><i class="fa fa-eye"></i> Total Views</span>
                             <div class="count green">2,500</div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
-                            <span class="count_top"><i class="fab fa-readme"></i> Read Sugested</span>
+                            <span class="count_top"><i class="fa fa-book"></i> Read Sugested</span>
                             <div class="count">4,567</div>
                         </div>
 
