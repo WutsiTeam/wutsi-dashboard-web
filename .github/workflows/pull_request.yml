@@ -1,0 +1,16 @@
+name: pull_request
+
+on: [pull_request]
+
+
+jobs:
+
+  #--------------------------
+  # BUILD
+  #--------------------------
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v1
