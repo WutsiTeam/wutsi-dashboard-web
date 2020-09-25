@@ -85,7 +85,7 @@
             $.get(url)
                 .done(function(response){
                     console.log('GET', url, response);
-                    $(me).html(response.value);
+                    me.innerHTML = response.value;
                 })
                 .fail(function(error){
                     console.error('GET', url, error);
