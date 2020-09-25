@@ -83,8 +83,12 @@
             const url = $(this).attr('data-count-url');
 
             console.log('GET', url);
-            $.get(url, function(response){
-                $(me).text(response.value);
+            $.ajax({
+                url: url,
+                method: 'GET',
+                success: function (response) {
+                    $(me).text(response.value);
+                }
             });
         });
     });
