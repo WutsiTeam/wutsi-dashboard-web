@@ -81,14 +81,11 @@
         $('[data-count-url]').each(function(){
             const me = $(this);
             const url = $(this).attr('data-count-url');
-            $.get(url)
-                .done(function(response){
-                    console.log('GET ', url,  response);
-                    $(me).text(response.value);
-                })
-                .fail(function(error){
-                    console.error('GET ', url,  error);
-                });
+
+            console.log('GET ', url,  response);
+            $.get(url, function(response){
+                $(me).text(response.value);
+            });
         });
     });
 </script>
