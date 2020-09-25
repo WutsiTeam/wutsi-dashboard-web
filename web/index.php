@@ -85,8 +85,8 @@
             $.get(url)
                 .done(function(response){
                     console.log('GET', url, response);
-                    console.log('>>>', me.innerHTML);
-                    me.innerHTML = n_formatter(response.value, 1);
+                    console.log('>>>', n_formatter(response.value, 1), me.html());
+                    me.html(n_formatter(response.value, 1));
                 })
                 .fail(function(error){
                     console.error('GET', url, error);
