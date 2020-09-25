@@ -82,7 +82,7 @@
             const me = $(this);
             const url = $(this).attr('data-count-url');
 
-            console.log('GET ', url,  response);
+            console.log('GET', url);
             $.get(url, function(response){
                 $(me).text(response.value);
             });
