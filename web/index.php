@@ -76,7 +76,8 @@
 
 <script>
     $(document).ready(function(){
-        /* Resolve all the counts */
+
+        /* Resolve all the counters */
         $('[data-count-url]').each(function(){
             const me = $(this);
             const url = $(this).attr('data-count-url');

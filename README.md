@@ -1,6 +1,7 @@
 # wutsi-dashboard-web
-`wutsi-dashboard-web` is the a dashboard app showing key wutsi KPIs. 
+`wutsi-dashboard-web` is the Wutsi dashboard. 
 
+![](https://github.com/WutsiTeam/wutsi-blog-dashboard/workflows/master/badge.svg)
 ![](https://img.shields.io/badge/language-php-blue.svg)
 
 # Links
