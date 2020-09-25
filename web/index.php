@@ -29,7 +29,7 @@
                     <div class="tile_count">
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
-                            <div class="count">2500</div>
+                            <div class="count" data-count-url="/app/user/count.php">2500</div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
@@ -74,4 +74,21 @@
 <?php include 'includes/footer.php';?>
 </body>
 
+<script>
+    $(document).ready(function(){
+        /* Resolve all the counts */
+        $('[data-count-url]').each(function(){
+            const me = $(this);
+            const url = $(this).attr('data-count-url');
+            $.get(url)
+                .done(function(response){
+                    console.log('GET ', url,  response);
+                    $(me).text(response.value);
+                })
+                .fail(function(error){
+                    console.error('GET ', url,  error);
+                });
+        });
+    });
+</script>
 </html>

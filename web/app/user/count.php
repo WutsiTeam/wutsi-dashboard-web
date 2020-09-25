@@ -1,5 +1,5 @@
 <?php
-$response = array ('count'=>100);
+$response = array ('value'=>100);
 
 echo json_encode($response);
 ?>
