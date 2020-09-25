@@ -74,7 +74,7 @@
 <?php include 'includes/footer.php';?>
 </body>
 
-<script>
+<script type="text/javascript">
     $(document).ready(function(){
 
         /* Resolve all the counters */
