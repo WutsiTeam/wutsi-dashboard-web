@@ -9,22 +9,8 @@ function http_tracking_url($uri) {
 }
 
 
-function http_post($url, $json_request_data) {
-    $ch=curl_init($url);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $json_request_data);
-    curl_setopt($ch, CURLOPT_HEADER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER,
-        array(
-            'Content-Type:application/json',
-            'X-Client-ID:wutsi-dashboard'
-        )
-    );
-
-    $result = curl_exec($ch);
-    curl_close($ch);
-
-    return $result;
+function http_post($url, $data_array) {
+    // TODO
 }
 
 ?>
