@@ -85,7 +85,6 @@
             $.get(url)
                 .done(function(response){
                     console.log('GET', url, response);
-                    console.log('>>>', n_formatter(response.value, 1), me.html());
                     me.html(response.value);
                 })
                 .fail(function(error){
