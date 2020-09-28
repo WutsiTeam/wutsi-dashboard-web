@@ -24,8 +24,10 @@
             <!-- page content -->
             <div class="right_col" role="main">
 
+                <h1>Home</h1>
+
                 <!-- top tiles -->
-                <div class="row" style="display: inline-block;">
+                <div class="row">
                     <div class="tile_count">
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
