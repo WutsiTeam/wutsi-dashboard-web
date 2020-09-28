@@ -13,6 +13,7 @@ function http_post($url, $data) {
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
     curl_setopt($ch, CURLOPT_HEADER, true);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_HTTPHEADER,
         array(
             'Content-Type: application/json',
@@ -23,7 +24,12 @@ function http_post($url, $data) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    return $_POST;
+    return array(
+        'url' => $url,
+        'data' => $data,
+        'result' => $result
+    );
+//    return $result;
 }
 
 ?>
