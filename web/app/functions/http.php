@@ -33,8 +33,8 @@ function http_post($url, $data) {
 
     return array(
         'url' => $url,
-        'data' => $data,
-        'result' => json_decode($result, true)
+        'request' => $data,
+        'response' => json_decode($result, true)
     );
 }
 
