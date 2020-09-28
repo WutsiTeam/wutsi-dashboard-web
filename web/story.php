@@ -23,7 +23,7 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-                <h1>Stories</h1>
+                <h1>Stories Published in the past 7 days</h1>
 
                 <table id="stories" class="display" style="width:100%">
                     <thead>
@@ -31,6 +31,7 @@
                             <th>ID</th>
                             <th>Title</th>
                             <th>Author</th>
+                            <th>Published Date</th>
                             <th>Views</th>
                             <th>Average Read Time</th>
                         </tr>
