@@ -22,7 +22,8 @@ function http_post($url, $data) {
         CURLOPT_HTTPHEADER     => array(
             'Content-Type: application/json',
             'X-Client-ID: wutsi-dashboard'
-        )
+        ),
+        CURLOPT_POSTFIELDS      => json_encode($data)
     );
     $ch=curl_init($url);
     curl_setopt_array($ch, $options);
