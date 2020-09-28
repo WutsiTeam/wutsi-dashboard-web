@@ -23,10 +23,9 @@
 
             <!-- page content -->
             <div class="right_col" role="main">
-
                 <h1>Stories</h1>
 
-                <table id="example" class="display" style="width:100%">
+                <table id="stories" class="display" style="width:100%">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -37,16 +36,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th>123</th>
-                            <th>This is a Story</th>
-                            <th>Ray Sponsible</th>
-                            <th>45</th>
-                            <th>1m 30s</th>
-                        </tr>
                     </tbody>
                 </table>
-
             </div>
 
 
@@ -59,7 +50,9 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
-
+        $('#stories').DataTable( {
+            "ajax": '/app/stoty/table.php'
+        } );
     });
 
 </script>
