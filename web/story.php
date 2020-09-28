@@ -51,7 +51,7 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#stories').DataTable( {
-            "ajax": '/app/stoty/table.php'
+            "ajax": '/app/story/table.php'
         } );
     });
 
