@@ -23,7 +23,7 @@ function http_post($url, $data) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    return $result;
+    return $_POST;
 }
 
 ?>
