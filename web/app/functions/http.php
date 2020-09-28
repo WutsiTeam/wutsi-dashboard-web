@@ -1,16 +1,16 @@
 <?php
 
 function http_blog_url($uri) {
-    return "https://int-com-wutsi-blog.herokuapp.com" + $uri;
+    return 'https://int-com-wutsi-blog.herokuapp.com' . $uri;
 }
 
 function http_tracking_url($uri) {
-    return "https://int-com-wutsi-track.herokuapp.com" + $uri;
+    return 'https://int-com-wutsi-track.herokuapp.com' . $uri;
 }
 
 function http_post($url, $data) {
     $ch=curl_init($url);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
     curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
     curl_setopt($ch, CURLOPT_HEADER, true);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
