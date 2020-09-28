@@ -9,17 +9,23 @@ function http_tracking_url($uri) {
 }
 
 function http_post($url, $data) {
-    $ch=curl_init($url);
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
-    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
-    curl_setopt($ch, CURLOPT_HEADER, true);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    curl_setopt($ch, CURLOPT_HTTPHEADER,
-        array(
+    $options = array(
+        CURLOPT_CUSTOMREQUEST  => 'POST', // POST
+        CURLOPT_RETURNTRANSFER => true,   // return web page
+        CURLOPT_HEADER         => false,  // don't return headers
+        CURLOPT_FOLLOWLOCATION => true,   // follow redirects
+        CURLOPT_MAXREDIRS      => 10,     // stop after 10 redirects
+        CURLOPT_ENCODING       => "",     // handle compressed
+        CURLOPT_AUTOREFERER    => true,   // set referrer on redirect
+        CURLOPT_CONNECTTIMEOUT => 120,    // time-out on connect
+        CURLOPT_TIMEOUT        => 120,    // time-out on response
+        CURLOPT_HTTPHEADER     => array(
             'Content-Type: application/json',
             'X-Client-ID: wutsi-dashboard'
         )
     );
+    $ch=curl_init($url);
+    curl_setopt_array($ch, $options);
 
     $result = curl_exec($ch);
     curl_close($ch);
@@ -27,9 +33,8 @@ function http_post($url, $data) {
     return array(
         'url' => $url,
         'data' => $data,
-        'result' => $result
+        'result' => json_decode($result, true)
     );
-//    return $result;
 }
 
 ?>
