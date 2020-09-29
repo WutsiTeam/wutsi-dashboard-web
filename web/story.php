@@ -48,7 +48,8 @@
 <script type="text/javascript">
     $(document).ready(function(){
         $('#stories').DataTable( {
-            "ajax": '/app/story/table.php'
+            'ajax': '/app/story/table.php',
+            'order': [0, 'desc']
         } );
     });
 
