@@ -32,8 +32,6 @@
                             <th>Title</th>
                             <th>Author</th>
                             <th>Published Date</th>
-                            <th>Views</th>
-                            <th>Average Read Time</th>
                         </tr>
                     </thead>
                 </table>
