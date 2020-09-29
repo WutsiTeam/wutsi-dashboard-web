@@ -39,7 +39,7 @@
     function to_result($stories, $user_map) {
         $result = array();
         foreach($stories as $story){
-            $userId = $story['userId'];
+//            $userId = $story['userId'];
 
             array_push($result, array(
                 $story['id'],
