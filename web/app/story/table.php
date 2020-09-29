@@ -44,7 +44,7 @@
             array_push($result, array(
                 $story['id'],
                 $story['title'],
-                $user_map[$userId]['fullName'],
+                '' /*$user_map[$userId]['fullName']*/,
                 ''
             ));
         }
@@ -52,7 +52,7 @@
     }
 
     $stories = load_stories();
-    $user_map = load_user_map($stories);
+    $user_map = array(); //load_user_map($stories);
     $result = to_result($stories, $user_map);
 
     echo array('data' => $result);
