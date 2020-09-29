@@ -10,7 +10,7 @@
             'live' => true,
             'limit' => 50
         );
-        return http_post($url, $request).response.stories;
+        return http_post($url, $request);
     }
 
     function load_user_map($stories) {
@@ -26,7 +26,7 @@
             'userIds' => array_unique($userIds),
             'limit' => userIds.length
         );
-        $users = http_post($url, $request).response.users;
+        $users = http_post($url, $request);
 
         // Result
         $result = array();

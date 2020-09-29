@@ -31,11 +31,7 @@ function http_post($url, $data) {
     $result = curl_exec($ch);
     curl_close($ch);
 
-    return array(
-        'url' => $url,
-        'request' => $data,
-        'response' => json_decode($result, true)
-    );
+    return json_decode($result, true);
 }
 
 ?>
