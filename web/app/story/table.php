@@ -10,7 +10,7 @@
             'live' => true,
             'limit' => 50
         );
-        return http_post($url, $request);
+        return http_post($url, $request)['stories'];
     }
 
     function load_user_map($stories) {
@@ -23,37 +23,40 @@
         // Search
         $url = http_blog_url('/v1/user/search');
         $request = array (
-            'userIds' => array_unique($userIds),
-            'limit' => userIds.length
+            'userIds' => $userIds,
+            'limit' => count($userIds)
         );
-        $users = http_post($url, $request);
+        $users = http_post($url, $request)['users'];
 
         // Result
-        $result = array();
+        $map = array();
         foreach ($users as $user) {
-            $result[$user["id"]] = $user;
+            $map[$user["id"]] = $user;
         }
-        return $result;
+        return $map;
     }
 
     function to_result($stories, $user_map) {
         $result = array();
-        foreach($stories as $story){
-//            $userId = $story['userId'];
+        foreach($stories as $it){
+            $timestamp = $it['publishedDateTime'] / 1000;
+            $userId = $it['userId'];
 
             array_push($result, array(
-                $story['id'],
-                $story['title'],
-                '' /*$user_map[$userId]['fullName']*/,
-                ''
+                $it['id'],
+                $it['title'],
+                $user_map[$userId]['fullName'],
+                date("Y-m-d", $timestamp)
             ));
         }
         return $result;
     }
 
     $stories = load_stories();
-//    $user_map = array(); //load_user_map($stories);
-//    $result = to_result($stories, $user_map);
+    $user_map = load_user_map($stories);
 
-    echo array('data' => $stories);
+    $result = to_result($stories, $user_map);
+    echo json_encode(
+        array('data' => $result)
+    );
 ?>
