@@ -1,11 +1,19 @@
 <?php
 
 function http_blog_url($uri) {
-    return 'https://int-com-wutsi-blog.herokuapp.com' . $uri;
+    $host = getenv('WUTSI_BLOG_API_HOST');
+    if (!$host) {
+        $host = 'int-com-wutsi-blog.herokuapp.com';
+    }
+    return 'https://' . $host . $uri;
 }
 
 function http_tracking_url($uri) {
-    return 'https://int-com-wutsi-track.herokuapp.com' . $uri;
+    $host = getenv('WUTSI_TRACK_API_HOST');
+    if (!$host) {
+        $host = 'int-com-wutsi-track.herokuapp.com';
+    }
+    return 'https://' . $host . $uri;
 }
 
 function http_post($url, $data) {
