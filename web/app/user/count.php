@@ -1,12 +1,12 @@
 <?php
     include '../functions/http.php';
 
-    $response = array ('value'=>100);
+    $url = http_blog_url('/v1/user/count');
+    $request = array(
+        'offset' => 0
+    );
+    $response = http_post($url, $request);
 
-// UNCOOMENT THIS and implement http_post() to make HTTP call to backend API
-//    $url = http_blog_url('/v1/user/count');
-//    $request = array();
-//    $response = http_post($url, $request);
-
-    echo json_encode($response);
+    $result = array('value' => $response['total']);
+    echo json_encode($result);
 ?>
