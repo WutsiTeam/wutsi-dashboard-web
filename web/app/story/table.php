@@ -52,8 +52,8 @@
     }
 
     $stories = load_stories();
-    $user_map = array(); //load_user_map($stories);
-    $result = to_result($stories, $user_map);
+//    $user_map = array(); //load_user_map($stories);
+//    $result = to_result($stories, $user_map);
 
-    echo array('data' => $result);
+    echo array('data' => $stories);
 ?>
