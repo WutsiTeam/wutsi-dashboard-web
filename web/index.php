@@ -35,18 +35,18 @@
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
-                            <span class="count_top"><i class="fa fa-clock-o"></i>Total Read Time</span>
-                            <div class="count"  data-count-url="/app/story/trt_count.php">-</div>
+                            <span class="count_top"><i class="fa fa-clock-o"></i>Total Read Time (secs)</span>
+                            <div class="count" data-count-url="/app/story/count.php?type=read_time">-</div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-eye"></i> Total Views</span>
-                            <div class="count green">-</div>
+                            <div class="count green" data-count-url="/app/story/count.php?type=viewers">-</div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-book"></i> Read Sugested</span>
-                            <div class="count">-</div>
+                            <div class="count" data-count-url="/app/story/count.php?type=xreads">-</div>
                         </div>
 
                     </div>

@@ -3,7 +3,7 @@
 
     $url = http_track_url('/v1/stats/search/overall');
     $request = array(
-        'type' => 'read_time',
+        'type' => $_GET["type"],
         'targetIds' => array(-1)
     );
     $response = http_post($url, $request);
