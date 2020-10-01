@@ -8,7 +8,6 @@
 <body class="nav-md">
     <div class="container body">
         <div class="main_container">
-
             <!-- sidebar -->
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
@@ -45,7 +44,7 @@
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
-                            <span class="count_top"><i class="fa fa-book"></i> Read Sugested</span>
+                            <span class="count_top"><i class="fa fa-book"></i> Read Suggested</span>
                             <div class="count" data-count-url="/app/story/count.php?type=xreads">-</div>
                         </div>
                     </div>
@@ -53,22 +52,26 @@
                 <!-- /top tiles -->
 
                 <div class="row">
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <h3>Total Read Time (secs)</h3>
                         <div class='chart-container' style='height:300px'>
                             <div id='chart_trt' class='border' data-chart-url='/app/story/chart.php?type=read_time'></div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-4">
                         <h3>Total Views</h3>
                         <div class='chart-container' style='height:300px'>
-                            <div id="chart_views" class='border' data-chart-url='/app/story/chart.php?type=viewers'></div>
+                            <div id="chart_viewers" class='border' data-chart-url='/app/story/chart.php?type=viewers'></div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <h3>Read Suggested</h3>
+                        <div class='chart-container' style='height:300px'>
+                            <div id="chart_xreads" class='border' data-chart-url='/app/story/chart.php?type=xreads'></div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
             <!-- /page content -->
         </div>
     </div>
@@ -126,7 +129,7 @@
         };
         var options = {
             chart: {
-                width: 400,
+                width: 325,
                 height: 300,
                 format: '1,000'
             },
