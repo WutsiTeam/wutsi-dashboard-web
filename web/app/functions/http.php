@@ -8,7 +8,7 @@ function http_blog_url($uri) {
     return 'https://' . $host . $uri;
 }
 
-function http_tracking_url($uri) {
+function http_track_url($uri) {
     $host = getenv('WUTSI_TRACK_API_HOST');
     if (!$host) {
         $host = 'int-com-wutsi-track.herokuapp.com';

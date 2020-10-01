@@ -36,7 +36,7 @@
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-clock-o"></i>Total Read Time</span>
-                            <div class="count">-</div>
+                            <div class="count"  data-count-url="/app/story/trt_count.php">-</div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
