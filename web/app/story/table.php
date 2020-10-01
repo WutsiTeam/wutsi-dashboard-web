@@ -8,7 +8,7 @@
             'sortOrder' => 'descending',
             'status' => 'published',
             'live' => true,
-            'limit' => 50
+            'limit' => 100
         );
         return http_post($url, $request)['stories'];
     }
