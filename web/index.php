@@ -52,19 +52,21 @@
                 <!-- /top tiles -->
 
                 <div class="row">
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6">
                         <h3>Total Read Time (secs)</h3>
                         <div class='chart-container' style='height:300px'>
                             <div id='chart_trt' class='border' data-chart-url='/app/story/chart.php?type=read_time'></div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                    <div class="col-12 col-md-6">
                         <h3>Total Views</h3>
                         <div class='chart-container' style='height:300px'>
                             <div id="chart_viewers" class='border' data-chart-url='/app/story/chart.php?type=viewers'></div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-4">
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-6">
                         <h3>Read Suggested</h3>
                         <div class='chart-container' style='height:300px'>
                             <div id="chart_xreads" class='border' data-chart-url='/app/story/chart.php?type=xreads'></div>
@@ -129,7 +131,7 @@
         };
         var options = {
             chart: {
-                width: 325,
+                width: 500,
                 height: 300,
                 format: '1,000'
             },
