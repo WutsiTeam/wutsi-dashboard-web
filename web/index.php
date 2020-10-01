@@ -90,7 +90,7 @@
             $.getJSON(url)
                 .done(function(response){
                     console.log('GET', url, response);
-                    const value = n_formatter(response.value, 3);
+                    const value = n_formatter(response.value, 1);
                     me.html(value);
                 })
                 .fail(function(error){
