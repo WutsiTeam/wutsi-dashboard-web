@@ -32,6 +32,7 @@
                             <th>Title</th>
                             <th>Author</th>
                             <th>Published Date</th>
+                            <th>Total Views</th>
                         </tr>
                     </thead>
                 </table>

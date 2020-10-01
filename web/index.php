@@ -48,22 +48,22 @@
                             <span class="count_top"><i class="fa fa-book"></i> Read Sugested</span>
                             <div class="count" data-count-url="/app/story/count.php?type=xreads">-</div>
                         </div>
-
                     </div>
                 </div>
                 <!-- /top tiles -->
 
                 <div class="row">
-                    <div class="col-md-12 col-sm-12 ">
-                        <h3>Total Read Time</h3>
-                        <div id="chart_trt"></div>
+                    <div class="col-12 col-md-6">
+                        <h3>Total Read Time (secs)</h3>
+                        <div class='chart-container' style='height:300px'>
+                            <div id='chart_trt' class='border' data-chart-url='/app/story/chart.php?type=read_time'></div>
+                        </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12 col-sm-12 ">
+                    <div class="col-12 col-md-6">
                         <h3>Total Views</h3>
-                        <div id="chart_views"></div>
+                        <div class='chart-container' style='height:300px'>
+                            <div id="chart_views" class='border' data-chart-url='/app/story/chart.php?type=viewers'></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,8 +78,11 @@
 
 <script type="text/javascript">
     $(document).ready(function(){
+        bind_counters();
+        bind_charts();
+    });
 
-        /* Resolve all the counters */
+    function bind_counters(){
         $('[data-count-url]').each(function(){
             const me = $(this);
             const url = $(this).attr('data-count-url');
@@ -95,7 +98,52 @@
                 })
             ;
         });
-    });
+    }
+
+    function bind_charts(){
+        $('[data-chart-url]').each(function(){
+            const me = $(this);
+            const url = $(this).attr('data-chart-url');
+
+            $.getJSON(url)
+                .done(function(response){
+                    console.log('GET', url, response);
+                    init_chart(me.attr('id'), response.labels, response.values)
+                    me.html(value);
+                })
+                .fail(function(error){
+                    console.error('GET', url, error);
+                })
+            ;
+        });
+    }
+
+    function init_chart(id, labels, values) {
+        const container = document.getElementById(id);
+        const data = {
+            categories: labels,
+            series: [{data: values}]
+        };
+        var options = {
+            chart: {
+                width: 400,
+                height: 300,
+                format: '1,000'
+            },
+            series: {
+                showLabel: false
+            },
+            chartExportMenu: {
+                visible: false
+            },
+            legend: {
+                visible: false,
+                showCheckbox: false
+            }
+        };
+        console.log(container, data);
+        tui.chart.columnChart(container, data, options);
+    }
 
     function n_formatter(num, digits) {
         var si = [
