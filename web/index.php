@@ -55,13 +55,13 @@
                     <div class="col-12 col-md-6">
                         <h3>Total Read Time (secs)</h3>
                         <div class='chart-container' style='height:300px'>
-                            <div id='chart_trt' class='border' data-chart-url='/app/story/chart.php?type=read_time'></div>
+                            <div id='chart_trt' class='border' data-chart-title='Read Time' data-chart-url='/app/story/chart.php?type=read_time'></div>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
                         <h3>Total Views</h3>
                         <div class='chart-container' style='height:300px'>
-                            <div id="chart_viewers" class='border' data-chart-url='/app/story/chart.php?type=viewers'></div>
+                            <div id="chart_viewers" class='border' data-chart-title='Views' data-chart-url='/app/story/chart.php?type=viewers'></div>
                         </div>
                     </div>
                 </div>
@@ -69,7 +69,7 @@
                     <div class="col-12 col-md-6">
                         <h3>Read Suggested</h3>
                         <div class='chart-container' style='height:300px'>
-                            <div id="chart_xreads" class='border' data-chart-url='/app/story/chart.php?type=xreads'></div>
+                            <div id="chart_xreads" class='border' data-chart-title='Read Suggested' data-chart-url='/app/story/chart.php?type=xreads'></div>
                         </div>
                     </div>
                 </div>
@@ -109,11 +109,12 @@
         $('[data-chart-url]').each(function(){
             const me = $(this);
             const url = $(this).attr('data-chart-url');
+            const title = $(this).attr('data-chart-title')
 
             $.getJSON(url)
                 .done(function(response){
                     console.log('GET', url, response);
-                    init_chart(me.attr('id'), response.labels, response.values)
+                    init_chart(me.attr('id'), title, response.labels, response.values)
                     me.html(value);
                 })
                 .fail(function(error){
@@ -123,7 +124,7 @@
         });
     }
 
-    function init_chart(id, labels, values) {
+    function init_chart(id, title, labels, values) {
         const container = document.getElementById(id);
         const data = {
             categories: labels,
@@ -134,6 +135,9 @@
                 width: 500,
                 height: 300,
                 format: '1,000'
+            },
+            yAxis: {
+                title: title
             },
             series: {
                 showLabel: false
