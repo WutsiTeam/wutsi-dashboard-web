@@ -108,13 +108,14 @@
     function bind_charts(){
         $('[data-chart-url]').each(function(){
             const me = $(this);
+            const id = $(this).attr('id');
             const url = $(this).attr('data-chart-url');
-            const title = $(this).attr('data-chart-title')
+            const title = $(this).attr('data-chart-title');
 
             $.getJSON(url)
                 .done(function(response){
                     console.log('GET', url, response);
-                    init_chart(me.attr('id'), title, response.labels, response.values)
+                    init_chart(id, title, response.labels, response.values)
                     me.html(value);
                 })
                 .fail(function(error){
