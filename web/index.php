@@ -107,7 +107,6 @@
 
     function bind_charts(){
         $('[data-chart-url]').each(function(){
-            const me = $(this);
             const id = $(this).attr('id');
             const url = $(this).attr('data-chart-url');
             const title = $(this).attr('data-chart-title');
