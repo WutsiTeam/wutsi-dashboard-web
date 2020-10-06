@@ -17,6 +17,9 @@
             <li>
                 <a href="/story.php">Stories</a>
             </li>
+            <li>
+                <a href="/link.php">Link Generator</a>
+            </li>
         </ul>
     </div>
 </div>
