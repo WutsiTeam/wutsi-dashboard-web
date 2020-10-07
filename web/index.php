@@ -36,16 +36,19 @@
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-clock-o"></i>Total Read Time (secs)</span>
                             <div class="count" data-count-url="/app/story/count.php?type=read_time">-</div>
+                            <div class="count_bottom">Yesterday: <span class="green" data-count-url="/app/story/count.php?type=read_time&yesterday=1">-</span></div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-eye"></i> Total Views</span>
-                            <div class="count green" data-count-url="/app/story/count.php?type=viewers">-</div>
+                            <div class="count" data-count-url="/app/story/count.php?type=viewers">-</div>
+                            <div class="count_bottom">Yesterday: <span class="green" data-count-url="/app/story/count.php?type=viewers&yesterday=1">-</span></div>
                         </div>
 
                         <div class="col-md-4 col-sm-4 mx-3 tile_stats_count">
                             <span class="count_top"><i class="fa fa-book"></i> Read Suggested</span>
                             <div class="count" data-count-url="/app/story/count.php?type=xreads">-</div>
+                            <div class="count_bottom">Yesterday: <span class="green" data-count-url="/app/story/count.php?type=xreads&yesterday=1">-</span></div>
                         </div>
                     </div>
                 </div>
@@ -115,7 +118,6 @@
                 .done(function(response){
                     console.log('GET', url, response);
                     init_chart(id, title, response.labels, response.values)
-                    me.html(value);
                 })
                 .fail(function(error){
                     console.error('GET', url, error);
@@ -150,7 +152,6 @@
                 showCheckbox: false
             }
         };
-        console.log(container, data);
         tui.chart.columnChart(container, data, options);
     }
 

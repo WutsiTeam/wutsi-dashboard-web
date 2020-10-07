@@ -1,12 +1,23 @@
 <?php
     include '../functions/http.php';
 
-    $url = http_track_url('/v1/stats/search/overall');
-    $request = array(
-        'type' => $_GET["type"],
-        'targetIds' => array(-1)
-    );
-    $response = http_post($url, $request);
+    if ($_GET["yesterday"]) {
+        $url = http_track_url('/v1/stats/search/daily');
+        $request = array(
+            'type' => $_GET["type"],
+            'targetIds' => array(-1),
+            'startDate' => date("Y-m-d", time() - 2*60 * 60 * 24),
+            'endDate' => date("Y-m-d")
+        );
+        $response = http_post($url, $request);
+    } else {
+        $url = http_track_url('/v1/stats/search/overall');
+        $request = array(
+            'type' => $_GET["type"],
+            'targetIds' => array(-1)
+        );
+        $response = http_post($url, $request);
+    }
 
     $value = 0;
     if (sizeof($response) > 0) {
