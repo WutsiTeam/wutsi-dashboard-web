@@ -6,7 +6,7 @@
         $request = array(
             'type' => $_GET["type"],
             'targetIds' => array(-1),
-            'startDate' => date("Y-m-d", time() - 2*60 * 60 * 24),
+            'startDate' => date("Y-m-d", time() - 1*60 * 60 * 24),
             'endDate' => date("Y-m-d")
         );
         $response = http_post($url, $request);
