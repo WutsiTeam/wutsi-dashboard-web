@@ -23,8 +23,39 @@
 
             <!-- page content -->
             <!-- PUT THE FORM HERE -->
+            <form action="" method="POST">
+            
+            <input type="url" name="url" id="" placeholder="Input URL here" required>
+
+            <select name="target" id="" required>
+            <option value="">Select a target</option>
+            <option value="">Facebook</option>
+            <option value="">Twitter</option>
+            <option value="">Linkedin</option>
+            
+            </select>
 
 
+            <input type="text" name="campaign" placeholder="Ads campaign">
+
+            <button type="submit" name="submit">Generate Link</button>
+            
+            </form>
+
+
+
+<?php
+
+
+     $url = $_POST['url'];
+     $target = $_POST['target'];
+     $campaign = $_POST['campaign'];
+     $submit = $_POST['submit'];
+
+
+     
+
+?>
             <!-- /page content -->
         </div>
     </div>
