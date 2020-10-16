@@ -46,12 +46,27 @@
 
 <?php
 
+if(isset($_POST['submit'])) {
+    $url = $_POST['url'];
+    $target = $_POST['target'];
+    $campaign = $_POST['campaign'];
+    $submit = $_POST['submit'];
 
-     $url = $_POST['url'];
-     $target = $_POST['target'];
-     $campaign = $_POST['campaign'];
-     $submit = $_POST['submit'];
 
+    if (empty($url) || empty($target) ) {
+        echo "Make sure to fill in all the info";
+    }
+
+    else{
+        echo "<a> .$url.?utm_source=.$target.?=utm_campaign=.$campaign </a>";
+    }
+}
+
+else{
+    echo "Link not generated";
+}
+
+    
 
      
 
