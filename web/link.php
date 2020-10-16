@@ -53,13 +53,13 @@ if(isset($_POST['submit'])) {
     $submit = $_POST['submit'];
 
 
-    if (empty($url) || empty($target) ) {
-        echo "Make sure to fill in all the info";
-    }
+   // if (empty($url) || empty($target) ) {
+       // echo "Make sure to fill in all the info";
+  //  }
 
-    else{
+    //else{
         echo "<a> .$url.?utm_source=.$target.?=utm_campaign=.$campaign </a>";
-    }
+   // }
 }
 
 else{
