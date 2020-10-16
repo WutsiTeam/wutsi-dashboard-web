@@ -3,9 +3,10 @@
 
 <head>
     <?php include 'includes/head.php';?>
+<link type="text/css" href="link.css">
 </head>
 
-<body class="nav-md">
+<body class="nav-md" >
     <div class="container body">
         <div class="main_container">
 
