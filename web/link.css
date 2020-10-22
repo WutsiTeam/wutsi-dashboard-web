@@ -1,16 +1,15 @@
 body {}
 
-form {
-    align-content: center;
-}
+form {}
 
 .form-content {
-    color: white;
-    margin: 200px;
+    color: #ffffff;
+    margin: 100px;
 }
 
 #form-control {
-    width: 200px;
+    width: 400px;
     height: 100px;
-    font-size: 20px;
+    font-size: 15px;
+    background-color: gray;
 }
