@@ -1,11 +1,12 @@
 body {}
 
-form {}
+form {
+    align-content: center;
+}
 
 .form-content {
     color: #ffffff;
-    margin: 400px;
-    box-shadow: 1px 2px2px;
+    box-shadow: 1px 2px 2px;
 }
 
 label {
@@ -17,7 +18,7 @@ label {
     width: 400px;
     height: 100px;
     font-size: 20px;
-    background-color: gray;
+    background-color: whitesmoke;
     justify-content: center;
 }
 
