@@ -24,24 +24,30 @@
 
             <!-- page content -->
             <!-- PUT THE FORM HERE -->
-            <form action="" method="POST">
-            
-            <input type="url" name="url" id="" placeholder="Input URL here" required>
+            <div class="form-content">
 
-            <select name="target" id="" required>
+            <form action="" method="POST">
+
+            <label>Enter the URL</label> <br>
+
+            <input type="url" name="url" id="" placeholder="Input URL here" required id="form-control"> <br>
+
+            <label for="">Select the target for the campaign </label> <br>
+            <select name="target" id="form-control" required>
             <option value="">Select a target</option>
             <option value="">Facebook</option>
             <option value="">Twitter</option>
             <option value="">Linkedin</option>
             
-            </select>
+            </select> <br>
 
+            <label for="">Indicate the campaign</label> <br>
+            <input type="text" name="campaign" id="form-control" placeholder="Ads campaign"> <br>
 
-            <input type="text" name="campaign" placeholder="Ads campaign">
-
-            <button type="submit" name="submit">Generate Link</button>
+            <button type="submit" id="form-control" name="submit">Generate Link</button>
             
             </form>
+            </div>
 
 
 
