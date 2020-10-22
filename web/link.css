@@ -1,3 +1,14 @@
 form {
     margin-left: 100px;
 }
+
+.form-content {
+    display: flex;
+    justify-content: center;
+}
+
+#form-control {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+}
