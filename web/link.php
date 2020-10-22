@@ -2,8 +2,10 @@
 <html lang="en">
 
 <head>
+
     <?php include 'includes/head.php';?>
-<link type="text/css" href="link.css">
+    <link rel="stylesheet" href="link.css">
+
 </head>
 
 <body class="nav-md" >
