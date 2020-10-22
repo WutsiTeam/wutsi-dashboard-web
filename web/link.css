@@ -1,14 +1,16 @@
-body {}
+body{}
+form {}
 
-form {
+
     
-}
+
+
 
 .form-content {
     margin-left: 50px;
     
     justify-content: center;
-    
+   
     color: white;
 }
 
