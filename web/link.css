@@ -1,16 +1,9 @@
-body{}
+body {}
+
 form {}
 
-
-    
-
-
-
 .form-content {
-    margin-left: 50px;
-    
-    justify-content: center;
-   
+    margin-left: 100px;
     color: white;
 }
 
