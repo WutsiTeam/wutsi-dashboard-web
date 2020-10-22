@@ -67,7 +67,7 @@ if(isset($_POST['submit'])) {
   //  }
 
     //else{
-        echo "<a>$url.?utm_source=.$target.?=utm_campaign=.$campaign</a>";
+        echo "<a class='output'>$url.?utm_source=.$target.?=utm_campaign=.$campaign</a>";
    // }
 }
 
