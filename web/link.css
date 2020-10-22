@@ -1,10 +1,15 @@
 body {}
 
-form {}
+form {
+    display: flex;
+}
 
 .form-content {
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;
     color: white;
-    margin-left: 10px;
 }
 
 #form-control {
