@@ -5,6 +5,7 @@ form {}
 .form-content {
     margin-left: 100px;
     color: white;
+    justify-content: center;
 }
 
 #form-control {
