@@ -1,12 +1,9 @@
-body {
-    background-color: red;
-}
+body {}
 
 form {}
 
 .form-content {
     display: flex;
-    justify-content: center;
 }
 
 #form-control {
