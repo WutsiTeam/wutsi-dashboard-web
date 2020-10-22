@@ -1,11 +1,12 @@
 body {}
 
-form {}
+form {
+    margin-left: 100px;
+    align-content: center;
+}
 
 .form-content {
-    margin-left: 100px;
     color: white;
-    align-content: center;
 }
 
 #form-control {
