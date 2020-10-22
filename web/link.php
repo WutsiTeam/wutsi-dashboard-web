@@ -32,7 +32,7 @@
 
             <label>Enter the URL</label> <br>
 
-            <input type="url" name="url" id="" placeholder="Input URL here" required id="form-control"> <br>
+            <input type="url" name="url" id="form-control" placeholder="Input URL here" required id="form-control"> <br>
 
             <label for="">Select the target for the campaign </label> <br>
             <select name="target" id="form-control" required>
@@ -72,7 +72,7 @@ if(isset($_POST['submit'])) {
 }
 
 else{
-    echo "Link not generated";
+    echo "<p>Link not generated</p>";
 }
 
     
