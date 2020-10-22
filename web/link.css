@@ -2,9 +2,7 @@ body {
     background-color: red;
 }
 
-form {
-    margin-left: 20px;
-}
+form {}
 
 .form-content {
     display: flex;
