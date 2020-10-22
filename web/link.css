@@ -1,6 +1,4 @@
-body {
-    margin: 200px;
-}
+body {}
 
 form {
     align-content: center;
@@ -8,6 +6,7 @@ form {
 
 .form-content {
     color: white;
+    margin: 200px;
 }
 
 #form-control {
