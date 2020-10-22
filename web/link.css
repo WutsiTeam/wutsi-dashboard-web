@@ -20,11 +20,13 @@
         height: 100px;
         font-size: 20px;
         background-color: whitesmoke;
-        justify-content: center;
     }
     
-    .button {
+    button {
         background-color: #4b4bc4;
+        width: 400px;
+        height: 100px;
+        font-size: 20px;
     }
     
     p {
