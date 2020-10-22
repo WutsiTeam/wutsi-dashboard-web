@@ -46,7 +46,7 @@
             <label for="">Indicate the campaign</label> <br>
             <input type="text" name="campaign" id="form-control" placeholder="Ads campaign"> <br>
 
-            <button type="submit" id="form-control" name="submit">Generate Link</button>
+            <button type="submit" id="form-control" class="button" name="submit">Generate Link</button>
             
             </form>
             </div>
