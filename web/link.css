@@ -1,5 +1,3 @@
-    body {}
-    
     form {
         align-content: center;
     }
@@ -41,5 +39,5 @@
         font-size: 20PX;
         font-weight: bold;
         color: #4b4bc4;
-        text-align: center;
+        margin-left: 600px;
     }
