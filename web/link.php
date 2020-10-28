@@ -26,29 +26,31 @@
 
             <!-- page content -->
             <!-- PUT THE FORM HERE -->
-            <div class="form-content">
+            <div class="right_col" role="main">
+                <div class="form-content">
 
-            <form action="" method="POST">
+                    <form action="" method="POST">
 
-            <label>Enter the URL</label> <br>
+                        <label>Enter the URL</label> <br>
+                        <input type="url" name="url" id="form-control" placeholder="Input URL here" required id="form-control"> <br>
 
-            <input type="url" name="url" id="form-control" placeholder="Input URL here" required id="form-control"> <br>
+                        <label for="">Select the target for the campaign </label> <br>
+                        <select name="target" id="form-control" required>
+                            <option value="">Select a target</option>
+                            <option value="">Facebook</option>
+                            <option value="">Twitter</option>
+                            <option value="">Linkedin</option>
+                        </select>
+                        <br>
 
-            <label for="">Select the target for the campaign </label> <br>
-            <select name="target" id="form-control" required>
-            <option value="">Select a target</option>
-            <option value="">Facebook</option>
-            <option value="">Twitter</option>
-            <option value="">Linkedin</option>
-            
-            </select> <br>
+                        <label for="">Indicate the campaign</label> <br>
+                        <input type="text" name="campaign" id="form-control" placeholder="Ads campaign"> <br>
 
-            <label for="">Indicate the campaign</label> <br>
-            <input type="text" name="campaign" id="form-control" placeholder="Ads campaign"> <br>
+                        <button type="submit" id="" class="button" name="submit">Generate Link</button>
 
-            <button type="submit" id="" class="button" name="submit">Generate Link</button>
-            
-            </form>
+                    </form>
+
+                </div>
             </div>
 
 
